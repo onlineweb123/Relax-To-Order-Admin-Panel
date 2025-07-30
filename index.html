@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<html>
+
+
+<!DOCTYPE html>
 <html lang="ta">
 <head>
   <meta charset="UTF-8">
@@ -8,23 +12,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     body {
-      background-color: #f4f7fc;
+      background-color: #e9f2f1;
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
     }
-    .d-none {
-      display: none !important;
-    }
+
     .login-box {
       background: white;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
       width: 100%;
-      max-width: 350px;
+      max-width: 360px;
       margin: 100px auto;
     }
+
     .dashboard-header {
       background-color: #00795f;
       color: white;
@@ -33,22 +34,37 @@
       display: flex;
       align-items: center;
     }
+
     .dashboard-header i {
       margin-right: 10px;
       cursor: pointer;
     }
+
     .card-box {
-      border-radius: 12px;
-      padding: 25px 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-radius: 15px;
+      padding: 30px 10px;
       background: white;
       text-align: center;
-      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     }
+
+    .card-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
     .card-box h2 {
-      font-weight: bold;
-      margin-bottom: 5px;
+      font-size: 30px;
+      margin-bottom: 10px;
     }
+
+    .card-box div {
+      font-size: 16px;
+      font-weight: 600;
+      color: #00795f;
+    }
+
     #sideMenu {
       position: fixed;
       top: 0;
@@ -61,19 +77,22 @@
       transition: 0.3s;
       z-index: 1000;
     }
+
     #sideMenu ul {
       list-style: none;
       padding-left: 0;
     }
+
     #sideMenu ul li {
       margin: 15px 0;
     }
+
     #sideMenu ul li a {
       color: white;
       text-decoration: none;
-      font-size: 16px;
-      cursor: pointer;
+      font-size: 17px;
     }
+
     #overlay {
       position: fixed;
       top: 0;
@@ -84,38 +103,25 @@
       z-index: 900;
       display: none;
     }
+
     .back-btn {
       float: right;
       margin-top: 10px;
-      margin-bottom: 10px;
       background: none;
       border: none;
       color: #00795f;
       font-weight: bold;
-      font-size: 15px;
+      font-size: 16px;
       cursor: pointer;
     }
-    
-    <!-- 👨‍🔧Service Man (Style) ஆரம்பம்  -->
-    
-   
 
-    
-    
-    <!-- 👨‍🔧Service Man (Style) முடிவு     -->
-    
-    <!-- 💰 Salary Calculator ஆரம்பம்  -->
-    
-    
-    
-    
-    
-    
-    <!-- 💰 Salary Calculator முடிவு     -->
-    
-    
-    
-    
+    a {
+      text-decoration: none;
+    }
+
+    .d-none {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
@@ -123,7 +129,7 @@
 <!-- Login Section -->
 <div id="loginSection">
   <div class="login-box">
-    <h4 class="text-center mb-4">Relax Admin Login</h4>
+    <h4 class="text-center mb-4 text-success fw-bold">Relax Admin Login</h4>
     <form onsubmit="return login()">
       <div class="mb-3">
         <label class="form-label">Username</label>
@@ -141,15 +147,14 @@
 
 <!-- Dashboard Section -->
 <div id="dashboardSection" class="d-none">
-
   <!-- Side Menu -->
   <div id="sideMenu">
-    <h4>📋 Menu</h4>
+    <h4 class="mb-4">📋 Menu</h4>
     <ul>
       <li><a onclick="showPage('dashboard')">🏠 Dashboard</a></li>
-      <li><a onclick="showPage('orders')"><a href="https://onlineweb123.github.io/Relax-To-Order-Service-Man/">👨‍🔧Service Man</a></a></li>
-      <li><a onclick="showPage('completed')"><a href="https://onlineweb123.github.io/Relax-To-Order-Salary-Calculator/" >💰 Salary</a></a></li>
-      <li><a onclick="showPage('pending')"><a href="https://onlineweb123.github.io/Relax-to-Order-Bill/">📝 Bill Amount</a></a></li>
+      <li><a href="https://onlineweb123.github.io/Relax-To-Order-Service-Man/">👨‍🔧 Service Man</a></li>
+      <li><a href="https://onlineweb123.github.io/Relax-To-Order-Salary-Calculator/">💰 Salary</a></li>
+      <li><a href="https://onlineweb123.github.io/Relax-to-Order-Bill/">📝 Bill Amount</a></li>
       <li><a onclick="showPage('others')">📦 Others</a></li>
       <li><a onclick="logout()">🔓 Logout</a></li>
     </ul>
@@ -164,88 +169,46 @@
     <span id="pageTitle">Relax Admin Dashboard</span>
   </div>
 
-  <!-- Pages -->
-  
-  
+  <!-- Main Dashboard Page -->
   <div id="dashboardPage" class="container mt-4 pageSection">
-      
-      <!-- Dashboard Link  -->
-      
-      <!--👨‍🔧 Service Link ஆரம்பம் -->
-      <a href="https://onlineweb123.github.io/Relax-To-Order-Service-Man/" >
-    <div class="row g-3">
-      <div class="col-6" onclick="showPage('orders')">
-        <div class="card-box">
-          <h2>👨‍🔧</h2>
-          <div><i class="bi  "></i>Service Man</div>
-        </div>   </a>
+    <div class="row g-4">
+      <div class="col-6">
+        <a href="https://onlineweb123.github.io/Relax-To-Order-Service-Man/">
+          <div class="card-box">
+            <h2>👨‍🔧</h2>
+            <div>Service Man</div>
+          </div>
+        </a>
       </div>
-      
-      <!-- 👨‍🔧 Service Link முடிவு -->
-      
-      <!-- 💰 Salary Link ஆரம்பம்  -->
-      
-      <div class="col-6" onclick="showPage('completed')"><a href="https://onlineweb123.github.io/Relax-To-Order-Salary-Calculator/">
-        <div class="card-box">
-            
-          <h2>💰</h2>
-          <div><i class="bi"></i> Salary </div>
-        </div> </a>
+      <div class="col-6">
+        <a href="https://onlineweb123.github.io/Relax-To-Order-Salary-Calculator/">
+          <div class="card-box">
+            <h2>💰</h2>
+            <div>Salary</div>
+          </div>
+        </a>
       </div>
-      
-      
-      
-      <div class="col-6" onclick="showPage('pending')"><a href="https://onlineweb123.github.io/Relax-to-Order-Bill/">
-        <div class="card-box">
-          <h2>📝</h2>
-          <div><i class="bi"></i>Bill Amount</div>
-        </div></a>
+      <div class="col-6">
+        <a href="https://onlineweb123.github.io/Relax-to-Order-Bill/">
+          <div class="card-box">
+            <h2>📝</h2>
+            <div>Bill Amount</div>
+          </div>
+        </a>
       </div>
-      
-      
       <div class="col-6" onclick="showPage('others')">
         <div class="card-box">
           <h2>📦</h2>
-          <div><i class="bi"></i>Others</div>
+          <div>Others</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="ordersPage" class="container mt-4 pageSection d-none">
-    <button class="back-btn" onclick="showPage('dashboard')"></button>
-        
-    
-    <!-- 👨‍🔧 Service Man ஆரம்பம்  -->
-      
-    
-      
-
-  <div id="completedPage" class="container mt-4 pageSection d-none">
-    <button class="back-btn" onclick="showPage('dashboard')"></button>
-    
-    
-    
-      <!-- 💰 Salary ஆரம்பம் -->
-    
-  </div>
-  
-  
-  
-
-  <div id="pendingPage" class="container mt-4 pageSection d-none">
-    <button class="back-btn" onclick="showPage('dashboard')"></button>
-    
-    <!-- 📝 Bill Amount ஆரம்பம்  -->
-    
-    
-  
-  
-  
-
+  <!-- Others Page -->
   <div id="othersPage" class="container mt-4 pageSection d-none">
-    <button class="back-btn" onclick="showPage('dashboard')"></button>
-   
+    <button class="back-btn" onclick="showPage('dashboard')">← Back</button>
+    <p class="mt-4">📦 Others Page Content Here</p>
   </div>
 </div>
 
@@ -254,7 +217,6 @@
   function login() {
     const user = document.getElementById('username').value;
     const pass = document.getElementById('password').value;
-
     if (user === "admin" && pass === "1234") {
       document.getElementById("loginSection").classList.add("d-none");
       document.getElementById("dashboardSection").classList.remove("d-none");
@@ -283,12 +245,9 @@
   }
 
   function showPage(page) {
-    const pages = ['dashboard', 'orders', 'completed', 'pending', 'others'];
+    const pages = ['dashboard', 'others'];
     const titles = {
       dashboard: 'Relax Admin Dashboard',
-      orders: '👨‍🔧Service Man',
-      completed: '💰 Salary',
-      pending: '📝 Bill Amount',
       others: '📦 Others'
     };
     pages.forEach(p => {
@@ -311,4 +270,9 @@
 </script>
 
 </body>
+</html>
+
+
+
+
 </html>
