@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html>
-
 
 <!DOCTYPE html>
 <html lang="ta">
@@ -12,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     body {
-      background-color: #e9f2f1;
+      background-color: #e9f0fa;
       font-family: 'Segoe UI', sans-serif;
     }
 
@@ -27,7 +25,7 @@
     }
 
     .dashboard-header {
-      background-color: #00795f;
+      background-color: #004d99;
       color: white;
       padding: 15px 20px;
       font-size: 20px;
@@ -62,7 +60,7 @@
     .card-box div {
       font-size: 16px;
       font-weight: 600;
-      color: #00795f;
+      color: #004d99;
     }
 
     #sideMenu {
@@ -71,7 +69,7 @@
       left: -260px;
       width: 250px;
       height: 100%;
-      background: #00795f;
+      background: #004d99;
       color: white;
       padding: 20px;
       transition: 0.3s;
@@ -109,7 +107,7 @@
       margin-top: 10px;
       background: none;
       border: none;
-      color: #00795f;
+      color: #004d99;
       font-weight: bold;
       font-size: 16px;
       cursor: pointer;
@@ -117,6 +115,15 @@
 
     a {
       text-decoration: none;
+    }
+
+    .btn-blue {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .btn-blue:hover {
+      background-color: #0056b3;
     }
 
     .d-none {
@@ -129,7 +136,7 @@
 <!-- Login Section -->
 <div id="loginSection">
   <div class="login-box">
-    <h4 class="text-center mb-4 text-success fw-bold">Relax Admin Login</h4>
+    <h4 class="text-center mb-4 text-primary fw-bold">Relax Admin Login</h4>
     <form onsubmit="return login()">
       <div class="mb-3">
         <label class="form-label">Username</label>
@@ -139,7 +146,7 @@
         <label class="form-label">Password</label>
         <input type="password" id="password" class="form-control" required>
       </div>
-      <button type="submit" class="btn btn-success w-100">Login</button>
+      <button type="submit" class="btn btn-blue w-100">Login</button>
       <div id="error" class="text-danger text-center mt-2 d-none">❌ Invalid credentials</div>
     </form>
   </div>
@@ -217,7 +224,7 @@
   function login() {
     const user = document.getElementById('username').value;
     const pass = document.getElementById('password').value;
-    if (user === "admin" && pass === "1234") {
+    if (user === "Admin" && pass === "12345") {
       document.getElementById("loginSection").classList.add("d-none");
       document.getElementById("dashboardSection").classList.remove("d-none");
       showPage('dashboard');
@@ -268,11 +275,7 @@
     closeMenu();
   }
 </script>
-
 </body>
 </html>
-
-
-
 
 </html>
