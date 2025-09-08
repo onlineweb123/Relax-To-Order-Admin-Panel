@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="ta">
 <head>
   <meta charset="UTF-8">
@@ -127,6 +129,41 @@
     .d-none {
       display: none !important;
     }
+    
+ 
+    <!-- -->
+    .wide-box {
+  border-radius: 15px;
+  padding: 20px;
+  background: white;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  height: 100px;      /* குறைந்த உயரம் */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wide-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.wide-box h2 {
+  font-size: 24px;
+  margin-right: 15px;
+}
+.wide-box div {
+  font-size: 18px;
+  font-weight: 600;
+  color: #004d99;
+}
+       
+   <!-- -->
+    
+    
+    
+    
+    
   </style>
 </head>
 <body>
@@ -160,7 +197,9 @@
       <li><a href="https://onlineweb123.github.io/Relax-To-Order-Service-Man/">👨‍🔧 Service Man</a></li>
       <li><a href="https://onlineweb123.github.io/Relax-To-Order-Salary-Calculator/">💰 Salary</a></li>
       <li><a href="https://onlineweb123.github.io/Relax-to-Order-Bill/">📝 Bill Amount</a></li>
-      <li><a onclick="showPage('others')">📦 Others</a></li>
+      <li><a href="https://onlineweb123.github.io/Relax-To-Order-Application/">📦 Others</a></li>
+      
+      <li><a onclick="showPage('others')">🌀 Extra </a></li>
       <li><a onclick="logout()">🔓 Logout</a></li>
     </ul>
   </div>
@@ -201,43 +240,60 @@
           </div>
         </a>
       </div>
-
-           
-      <div class="col-6">
-        <a href="                  https://search.google.com/search-console/insights/achievements?resource_id=https://onlineweb123.github.io/Relax-To-Orders/&utm_source=wnc_20144934&utm_medium=gamma&utm_campaign=wnc_20144934&utm_content=msg_110397745&hl=en">
+      
+       <div class="col-6">
+        <a href="                  https://search.google.com/search-console/insights/achievements?resource_id=https://onlineweb123.github.io/Relax-To-Orders/&utm_source=wnc_20144934&utm_medium=gamma& _campaign=wnc_20144934&utm_content=msg_110397745&hl=en">
           <div class="card-box">
             <h2>📊</h2>
             <div>Track</div>
           </div>
         </a>
-      </div>
-
-
-
-
-      <div class="col-6" onclick="showPage('others')">
-        <div class="card-box">
-          <h2>📦</h2>
-          <div>Others</div>
-        </div>
-      </div>
-
-
-  
-
-
-
-
-
+      </div>             
+                      
+ 
+ 
+ 
+     
+      
     </div>
   </div>
+  
+  <!--  Main Dashboard Page  முடிவு -->
+  
+  
+ 
+   <!-- Box 2 ஆரம்பம்  -->
+   
+  <br>
+  
+  
+  <div class="col-12">
+  <a href="https://onlineweb123.github.io/Relax-To-Order-Application/">
+    <div class="wide-box">
+      <h2>🌀</h2>
+      <div> Aplication Form </div>
+    </div>
+  </a>
+</div><br>
+
+
+
+
+
+
+   
+   <!-- Box 2 முடிவு     -->
+  
+  
+  
+  
 
   <!-- Others Page -->
   <div id="othersPage" class="container mt-4 pageSection d-none">
     <button class="back-btn" onclick="showPage('dashboard')">← Back</button>
-    <p class="mt-4">📦 Others Page Content Here</p>
+    <p class="mt-4">📦 Extra Own Page Content Here</p>
   </div>
-</div>
+</div>  
 
 <!-- Script -->
 <script>
@@ -296,4 +352,6 @@
   }
 </script>
 </body>
+</html>
+
 </html>
