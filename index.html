@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="ta">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Relax Admin</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./manifest.json">
+    <link rel='stylesheet' href='./style.css'>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js');
+        };
+    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PWA Example">
+    <link rel="apple-touch-icon" href="icon-152x152.png">
+    <meta name="msapplication-TileImage" content="icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
+    <style>
     body {
       background-color: #e9f0fa;
       font-family: 'Segoe UI', sans-serif;
@@ -127,8 +143,8 @@
     .d-none {
       display: none !important;
     }
-    
- 
+
+
     <!-- -->
     .wide-box {
   border-radius: 15px;
@@ -155,18 +171,20 @@
   font-weight: 600;
   color: #004d99;
 }
-       
+
    <!-- -->
-    
-    
-    
-    
-    
+
+
+
+
+
   </style>
+    
 </head>
 <body>
-
-<!-- Login Section -->
+    
+    
+    <!-- Login Section -->
 <div id="loginSection">
   <div class="login-box">
     <h4 class="text-center mb-4 text-primary fw-bold">Relax Admin Login</h4>
@@ -235,7 +253,7 @@
           </div>
         </a>
       </div>
-      
+
        <div class="col-6">
         <a href="https://www.google.com/search?q=Relax+to+Order&stick=H4sIAAAAAAAA_-NgU1I2qEhNtExNNLMwtExOTDU1TLEyqDBPTEk0MTY3TDYxsjBPNVjEyheUmpNYoVCSr-BflJJaBABkfb95OAAAAA&hl=en-GB&mat=CWCxEnrC-4s4ElcBYJahabndBQbuErxdo1htCOFfiKXWAVg80T8G2qJR2GnaJkomTCkRm2mLprqQmzrLcxnzHwjF7NKcni9Z_JixhNDJo66Yogw_38GtcvpiTwsXO_ziQok&authuser=1#ebo=0&mpd=~4074627100577018208/promote/performance?from%3D2025-09%26to%3D2025-09%26tab%3D1">
           <div class="card-box">
@@ -244,24 +262,24 @@
           </div>
         </a>
       </div>             
-                      
- 
- 
- 
-     
-      
+
+
+
+
+
+
     </div>
   </div>
-  
+
   <!--  Main Dashboard Page  முடிவு -->
-  
-  
- 
+
+
+
    <!-- Box 2 ஆரம்பம்  -->
-   
+
   <br>
-  
-  
+
+
   <div class="col-12">
   <a href="https://onlineweb123.github.io/Relax-To-Order-Application/">
     <div class="wide-box">
@@ -276,21 +294,22 @@
 
 
 
-   
+
    <!-- Box 2 முடிவு     -->
-  
-  
-  
-  
+
+
+
+
 
   <!-- Others Page -->
   <div id="othersPage" class="container mt-4 pageSection d-none">
     <button class="back-btn" onclick="showPage('dashboard')">← Back</button>
     <p class="mt-4">📦 Extra Own Page Content Here</p>
   </div>
-</div>  
-
-<!-- Script -->
+</div>
+    
+    
+    <!-- Script -->
 <script>
   function login() {
     const user = document.getElementById('username').value;
@@ -346,5 +365,6 @@
     closeMenu();
   }
 </script>
+    
 </body>
 </html>
